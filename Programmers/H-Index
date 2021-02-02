@@ -1,0 +1,19 @@
+def solution(citations):
+    max_val = max(citations)
+    min_val = min(citations)
+    
+    while True:
+        
+        mid = int((max_val + min_val) / 2)
+    
+        cnt = 0
+        for citation in citations:
+            if mid <= citation:
+                cnt += 1 
+
+        if cnt >= mid:
+            break
+        else:
+            max_val -= 1
+            
+    return mid
